@@ -40,7 +40,7 @@ Node* Node::findNode(Node *root,Node *&p,int val)
 {
 
     queue<Node*> coada;
-    Node *temp = nullptr;
+    Node *temp = nullptr; // nodul care urmeaza sa fie sters
     coada.push(root);
 
     while(!coada.empty()&&root != nullptr)
@@ -59,7 +59,7 @@ Node* Node::findNode(Node *root,Node *&p,int val)
         root = coada.front();
 
         if(coada.size() == 1)
-            p = root;
+            p = root;  // nodul cel mai de jos
 
     }
 
@@ -74,15 +74,15 @@ Node* Node::removeNodes(Node* &node,int val)
 
     while(q1 = Node::findNode(node,q2,val))
         {
-            if(node->parent == nullptr&&node->left == nullptr&&node->right == nullptr)
+            if(node->parent == nullptr&&node->left == nullptr&&node->right == nullptr) // cazul in care node = radacina
             {
                 node = node->left = node->right;
                 delete q1;
                 return node;
             }
 
-            q1->set_value(q2->get_value());
-
+            q1->set_value(q2->get_value()); // nodul de sters e inlocuit cu nodul cel mai de jos
+           // sterg nodul cel mai de jos
            if(q2->parent->left == q2)
                  q2->parent->left = nullptr;
             else
