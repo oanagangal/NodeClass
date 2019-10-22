@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1571756502 source:c:\users\dragos\desktop\new folder (2)\node\main.cpp
+	<iostream>
+	"Node.h"
+
+1571759152 source:c:\users\dragos\desktop\new folder (2)\node\src\node.cpp
+	"Node.h"
+	<queue>
+	<iostream>
+	<stack>
+
+1571756328 c:\users\dragos\desktop\new folder (2)\node\include\node.h
+
