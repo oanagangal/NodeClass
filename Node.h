@@ -16,7 +16,7 @@ class Node
 
 
 
-    static Node* findNode(Node* root,Node*&,int val);
+    static Node* findNode(Node* root,Node*&,int val);  // gaseste nodul/nodurile de sters
 
     void set_descendants(Node *l,Node *r);
     void set_parent(Node *p);
